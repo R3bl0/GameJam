@@ -33,7 +33,6 @@ public class PlatformerPlayerMovment : MonoBehaviour
         
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
-            Debug.Log("Jump button pressed and player is grounded");
             _isJumping = true;
         }
         FlipSprite();
@@ -46,7 +45,6 @@ public class PlatformerPlayerMovment : MonoBehaviour
         
         if (_isJumping)
         {
-            Debug.Log("Player is jumping");
             Jump();
             _isJumping = false;
         }
@@ -59,7 +57,6 @@ public class PlatformerPlayerMovment : MonoBehaviour
 
     private void Jump()
     {
-        Debug.Log("Adding jump force");
         _rigidbody.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
     }
 
