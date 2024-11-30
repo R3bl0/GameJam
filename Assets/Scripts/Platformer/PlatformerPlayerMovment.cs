@@ -15,6 +15,7 @@ public class PlatformerPlayerMovment : MonoBehaviour
 
     private Rigidbody2D _rigidbody;
     private BoxCollider2D _boxCollider;
+    private Animator _animator;
     private bool _isFacingRight = true;
     private float _xInput;
 
@@ -23,6 +24,7 @@ public class PlatformerPlayerMovment : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
         _rigidbody.freezeRotation = true;
         _boxCollider = GetComponent<BoxCollider2D>();
+        _animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -34,6 +36,7 @@ public class PlatformerPlayerMovment : MonoBehaviour
             _performJump = true;
         }
         FlipSprite();
+        UpdateAnimation();
     }
 
     private void FixedUpdate()
@@ -66,6 +69,12 @@ public class PlatformerPlayerMovment : MonoBehaviour
             localScale.x *= -1;
             transform.localScale = localScale;
         }
+    }
+    
+    private void UpdateAnimation()
+    {
+        bool isRunning = Mathf.Abs(_xInput) > 0;
+        _animator.SetBool("isRunning", isRunning);
     }
 
     private bool IsGrounded()
