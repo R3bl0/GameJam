@@ -11,14 +11,14 @@ public class SceneChanger : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            // Zapisz pozycję gracza przed przejściem do nowej sceny
+            // Zapisz pozycję gracza w GameManagerze
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             if (player != null)
             {
                 GameManager.Instance.SavePlayerPosition(player.transform.position);
             }
 
-            // Przełącz na inną scenę
+            // Przejdź do nowej sceny
             SceneManager.LoadScene(otherSceneName);
         }
     }
