@@ -6,10 +6,13 @@ public class PlayerStartPosition : MonoBehaviour
 {
     void Start()
     {
-        if (GameManager.Instance != null && GameManager.Instance.positionSaved)
+        if (GameManager.Instance != null)
         {
-            // Ustaw pozycję gracza na ostatnio zapisaną
-            transform.position = GameManager.Instance.savedPosition;
+            Vector3 lastPosition = GameManager.Instance.lastPosition;
+            if (lastPosition != Vector3.zero)
+            {
+                transform.position = lastPosition;
+            }
         }
     }
 }

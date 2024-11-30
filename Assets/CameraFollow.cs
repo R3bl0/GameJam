@@ -4,13 +4,22 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public float FollowSpeed = 2f;
-    public Transform target;
+    public Transform player;  // Transform gracza
+    public Vector3 offset;    // Przesunięcie kamery względem gracza
+    public float smoothSpeed = 0.125f; // Szybkość wygładzania
 
-    // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
-        Vector3 newPos = new Vector3(target.position.x, target.position.y, -10f);
-        transform.position = Vector3.Slerp(transform.position, newPos, FollowSpeed * Time.deltaTime);
+        if (player != null)
+        {
+            // Oblicz docelową pozycję kamery, uwzględniając offset
+            Vector3 desiredPosition = player.position + offset;
+
+            // Wygładzamy ruch kamery
+            Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
+
+            // Ustawiamy pozycję kamery
+            transform.position = smoothedPosition;
+        }
     }
 }
