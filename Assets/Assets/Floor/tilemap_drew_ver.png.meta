@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d567b3f9e9620994db77533a32601bbd
+guid: 1fe505a12202c8549a89210e936c0a5a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: podloga_tilemap3_0
+      name: tilemap_drew_ver_0
       rect:
         serializedVersion: 2
         x: 0
@@ -111,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49ca298f301a0844b8c5657219f967de
-      internalID: 362836993
+      spriteID: 82776c1572022bd438f62ec939306864
+      internalID: 1549589875
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: podloga_tilemap3_1
+      name: tilemap_drew_ver_1
       rect:
         serializedVersion: 2
         x: 32
@@ -132,14 +132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f80733ad35599f4a9182153ff2010fe
-      internalID: -1878162747
+      spriteID: 85e22553d1e956a45b6fe3d53c23f685
+      internalID: -30837817
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: podloga_tilemap3_2
+      name: tilemap_drew_ver_2
       rect:
         serializedVersion: 2
         x: 64
@@ -153,14 +153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a875df4160b121d4889463aeb1a794a5
-      internalID: -1318471017
+      spriteID: 312e4f6b7b14e53469466c2e69d9b22c
+      internalID: 1697026504
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: podloga_tilemap3_3
+      name: tilemap_drew_ver_3
       rect:
         serializedVersion: 2
         x: 0
@@ -174,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d3a176e7fabd8345badb10ab4c9e361
-      internalID: -1972536262
+      spriteID: c54fdb2a5a166554abdd3f93be65609b
+      internalID: 854108520
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: podloga_tilemap3_4
+      name: tilemap_drew_ver_4
       rect:
         serializedVersion: 2
         x: 32
@@ -195,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88af2af6e45fec347afcdc73efd44b7e
-      internalID: -250889909
+      spriteID: d3801e93d7f3c6e4182c03bf3b337321
+      internalID: 478848802
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: podloga_tilemap3_5
+      name: tilemap_drew_ver_5
       rect:
         serializedVersion: 2
         x: 64
@@ -216,14 +216,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c144a0615ea59648820a24f28523246
-      internalID: 1076665838
+      spriteID: 445205364019a5841b0ed405797e3216
+      internalID: 1801116186
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: podloga_tilemap3_6
+      name: tilemap_drew_ver_6
       rect:
         serializedVersion: 2
         x: 0
@@ -237,14 +237,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7becef400fd6dd244b6b5d360c3be674
-      internalID: -315120625
+      spriteID: 1dcaab70221b8ec4790f5b2847e66d62
+      internalID: 31384480
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: podloga_tilemap3_7
+      name: tilemap_drew_ver_7
       rect:
         serializedVersion: 2
         x: 32
@@ -258,14 +258,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f9e807c563e4694e9d8934e99be15d2
-      internalID: 256160223
+      spriteID: 0eeec24f8ab5f30428b1eb32e409dca8
+      internalID: 30965484
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: podloga_tilemap3_8
+      name: tilemap_drew_ver_8
       rect:
         serializedVersion: 2
         x: 64
@@ -279,8 +279,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1745280b88147354790c22a1f8c7979c
-      internalID: -344602527
+      spriteID: 01f3cf774bc63154c9dd02bbc6ec5e30
+      internalID: 445640580
       vertices: []
       indices: 
       edges: []
@@ -296,15 +296,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      podloga_tilemap3_0: 362836993
-      podloga_tilemap3_1: -1878162747
-      podloga_tilemap3_2: -1318471017
-      podloga_tilemap3_3: -1972536262
-      podloga_tilemap3_4: -250889909
-      podloga_tilemap3_5: 1076665838
-      podloga_tilemap3_6: -315120625
-      podloga_tilemap3_7: 256160223
-      podloga_tilemap3_8: -344602527
+      tilemap_drew_ver_0: 1549589875
+      tilemap_drew_ver_1: -30837817
+      tilemap_drew_ver_2: 1697026504
+      tilemap_drew_ver_3: 854108520
+      tilemap_drew_ver_4: 478848802
+      tilemap_drew_ver_5: 1801116186
+      tilemap_drew_ver_6: 31384480
+      tilemap_drew_ver_7: 30965484
+      tilemap_drew_ver_8: 445640580
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
