@@ -5,38 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
-    public GameObject topDownPlayerPrefab;  // Prefab gracza w Scene1
-    public GameObject platformerPlayerPrefab;  // Prefab gracza w Scene2
-    public CameraFollow cameraFollow;
+    public string otherSceneName;
 
-    private void Update()
+    void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))  // Sprawdzamy, czy naciśnięto "E"
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            if (SceneManager.GetActiveScene().name == "SV1")
+            // Zapisz pozycję gracza w GameManagerze
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            if (player != null)
             {
-                ChangeScene("TD1", topDownPlayerPrefab);
+                GameManager.Instance.SavePlayerPosition(player.transform.position);
             }
-            else if (SceneManager.GetActiveScene().name == "TD1")
-            {
-                ChangeScene("SV1", platformerPlayerPrefab);
-            }
-        }
-    }
 
-    private void ChangeScene(string sceneName, GameObject newPlayerPrefab)
-    {
-        // Zniszczenie obecnego gracza w scenie
-        GameObject currentPlayer = GameObject.FindGameObjectWithTag("Player");
-        if (currentPlayer != null)
-        {
-            Destroy(currentPlayer);
+            // Przejdź do nowej sceny
+            SceneManager.LoadScene(otherSceneName);
         }
-        
-        SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
-        
-        GameObject player = Instantiate(newPlayerPrefab, Vector3.zero, Quaternion.identity);
-
-        cameraFollow.player = player.transform;
     }
 }
