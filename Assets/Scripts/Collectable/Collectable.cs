@@ -1,15 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-public class Collectable : MonoBehaviour
+
+namespace Collectable
 {
-    public static int count { get; private set; } = 0;
-    private void OnTriggerEnter2D(Collider2D other)
+    public class Collectable : MonoBehaviour
     {
-        if (other.CompareTag("Player"))
+        public static int count { get; private set; } = 0;
+        private void OnTriggerEnter2D(Collider2D other)
         {
-            count++;
-            Destroy(gameObject);
+            if (other.CompareTag("Player"))
+            {
+                count++;
+                Destroy(gameObject);
+            }
         }
     }
 }
