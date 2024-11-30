@@ -3419,7 +3419,7 @@ GameObject:
   - component: {fileID: 1218672128}
   - component: {fileID: 1218672130}
   - component: {fileID: 1218672129}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Pipes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4908,7 +4908,7 @@ GameObject:
   - component: {fileID: 1607683319}
   - component: {fileID: 1607683318}
   - component: {fileID: 1607683320}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
