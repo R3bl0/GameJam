@@ -11,7 +11,7 @@ public class PlatformerPlayerMovment : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     
     [Header("Jump Parameters")]
-    private bool _performJump;
+    private bool _isJumping;
 
     private Rigidbody2D _rigidbody;
     private BoxCollider2D _boxCollider;
@@ -33,7 +33,8 @@ public class PlatformerPlayerMovment : MonoBehaviour
         
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
-            _performJump = true;
+            Debug.Log("Jump button pressed and player is grounded");
+            _isJumping = true;
         }
         FlipSprite();
         UpdateAnimation();
@@ -43,9 +44,11 @@ public class PlatformerPlayerMovment : MonoBehaviour
     {
         Move();
         
-        if (_performJump)
+        if (_isJumping)
         {
+            Debug.Log("Player is jumping");
             Jump();
+            _isJumping = false;
         }
     }
 
@@ -56,7 +59,7 @@ public class PlatformerPlayerMovment : MonoBehaviour
 
     private void Jump()
     {
-        _performJump = false;
+        Debug.Log("Adding jump force");
         _rigidbody.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
     }
 
@@ -75,6 +78,7 @@ public class PlatformerPlayerMovment : MonoBehaviour
     {
         bool isRunning = Mathf.Abs(_xInput) > 0;
         _animator.SetBool("isRunning", isRunning);
+        _animator.SetBool("isJumping", !IsGrounded());
     }
 
     private bool IsGrounded()
