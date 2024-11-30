@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3671343874509247513}
   - component: {fileID: 3515493095906553415}
   - component: {fileID: 1189164277958561515}
+  - component: {fileID: 3990571800122276628}
   m_Layer: 0
   m_Name: Top Down Player
   m_TagString: Player
@@ -76,12 +77,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c90d471e644528342b22eb02ccb66463, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cdd6f224cc4681c418b6b919da21fe25, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.2, y: 0.2}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -128,6 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveSpeed: 5
   rb: {fileID: 3671343874509247513}
+  animator: {fileID: 3990571800122276628}
 --- !u!114 &1189164277958561515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,4 +142,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1b287c9da964b6c89fc5f8ed7c53a21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastPosition: {x: 0, y: 0, z: 0}
+  playerPrefab2D: {fileID: 0}
+  playerPrefabTopDown: {fileID: 0}
+  savedPosition: {x: 0, y: 0, z: 0}
+  positionSaved: 0
+--- !u!95 &3990571800122276628
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2599272297505422258}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bf4d2177bf5ca42e288131837faee2fb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
