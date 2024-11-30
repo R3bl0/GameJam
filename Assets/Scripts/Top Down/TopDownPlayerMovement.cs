@@ -8,6 +8,7 @@ public class TopDownPlayerMovement : MonoBehaviour
     public float MoveSpeed;
 
     public Rigidbody2D rb;
+    public Animator animator;
 
     private Vector2 moveDirection;
 
@@ -26,8 +27,12 @@ public class TopDownPlayerMovement : MonoBehaviour
     {
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
-
+        
         moveDirection = new Vector2(moveX, moveY).normalized;
+        
+        animator.SetFloat("Horizontal", moveX);
+        animator.SetFloat("Vertical", moveY);
+        animator.SetFloat("Speed", moveDirection.sqrMagnitude);
     }
 
     void Move()
