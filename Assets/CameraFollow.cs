@@ -4,13 +4,40 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public float FollowSpeed = 2f;
-    public Transform target;
+    public Vector3 offset = new Vector3(0, 5, -10);
+    public float followSpeed = 5f;
 
-    // Update is called once per frame
-    void Update()
+    private Transform target;
+
+    private void Start()
     {
-        Vector3 newPos = new Vector3(target.position.x, target.position.y, -10f);
-        transform.position = Vector3.Slerp(transform.position, newPos, FollowSpeed * Time.deltaTime);
+        FindPlayer();
+    }
+
+    private void LateUpdate()
+    {
+        if (target != null)
+        {
+            Vector3 targetPosition = target.position + offset;
+            transform.position = Vector3.Lerp(transform.position, targetPosition, followSpeed * Time.deltaTime);
+        }
+    }
+
+    public void FindPlayer()
+    {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+        {
+            target = player.transform;
+        }
+        else
+        {
+            Debug.LogWarning("Nie znaleziono obiektu z tagiem 'Player'.");
+        }
+    }
+
+    public void SetTarget(Transform newTarget)
+    {
+        target = newTarget;
     }
 }

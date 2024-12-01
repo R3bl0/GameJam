@@ -8,6 +8,7 @@ public class SceneChanger : MonoBehaviour
     public GameObject topDownPlayerPrefab;
     public GameObject platformerPlayerPrefab;
     public CameraFollow cameraFollow;
+    [SerializeField] Animator anim;
 
     private void Update()
     {
@@ -15,27 +16,34 @@ public class SceneChanger : MonoBehaviour
         {
             if (SceneManager.GetActiveScene().name == "SV1")
             {
-                ChangeScene("TD1", topDownPlayerPrefab);
+                StartCoroutine(ChangeScene("TD1", topDownPlayerPrefab));
             }
             else if (SceneManager.GetActiveScene().name == "TD1")
             {
-                ChangeScene("SV1", platformerPlayerPrefab);
+                StartCoroutine(ChangeScene("SV1", platformerPlayerPrefab));
             }
         }
     }
 
-    private void ChangeScene(string sceneName, GameObject newPlayerPrefab)
+    private IEnumerator ChangeScene(string sceneName, GameObject newPlayerPrefab)
     {
+        anim.SetTrigger("shhh");
+        yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
+        
+        SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
+        
+        //yield return null;
+        
+        anim.SetTrigger("end");
+        
         GameObject currentPlayer = GameObject.FindGameObjectWithTag("Player");
         if (currentPlayer != null)
         {
             Destroy(currentPlayer);
         }
 
-        SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
-
         GameObject player = Instantiate(newPlayerPrefab, Vector3.zero, Quaternion.identity);
 
-        cameraFollow.target = player.transform;
+        cameraFollow.SetTarget(player.transform);
     }
 }
