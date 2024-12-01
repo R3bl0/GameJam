@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6215358319249967954}
   - component: {fileID: 2872727135584211103}
   - component: {fileID: 6348062926278458003}
+  - component: {fileID: 2625458427610488747}
   m_Layer: 0
   m_Name: WD40
   m_TagString: Untagged
@@ -143,3 +144,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec0fdd46db65db048bab7dcf7667e03a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &2625458427610488747
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5977732188480442098}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d12e3f29addfd4ea1808b8074f9e7164, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
