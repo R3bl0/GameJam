@@ -5,21 +5,37 @@ using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
-    public string otherSceneName;
+    public GameObject topDownPlayerPrefab;
+    public GameObject platformerPlayerPrefab;
+    public CameraFollow cameraFollow;
 
-    void Update()
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            // Zapisz pozycję gracza w GameManagerze
-            GameObject player = GameObject.FindGameObjectWithTag("Player");
-            if (player != null)
+            if (SceneManager.GetActiveScene().name == "SV1")
             {
-                GameManager.Instance.SavePlayerPosition(player.transform.position);
+                ChangeScene("TD1", topDownPlayerPrefab);
             }
-
-            // Przejdź do nowej sceny
-            SceneManager.LoadScene(otherSceneName);
+            else if (SceneManager.GetActiveScene().name == "TD1")
+            {
+                ChangeScene("SV1", platformerPlayerPrefab);
+            }
         }
+    }
+
+    private void ChangeScene(string sceneName, GameObject newPlayerPrefab)
+    {
+        GameObject currentPlayer = GameObject.FindGameObjectWithTag("Player");
+        if (currentPlayer != null)
+        {
+            Destroy(currentPlayer);
+        }
+
+        SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
+
+        GameObject player = Instantiate(newPlayerPrefab, Vector3.zero, Quaternion.identity);
+
+        //cameraFollow.player = player.transform;
     }
 }
