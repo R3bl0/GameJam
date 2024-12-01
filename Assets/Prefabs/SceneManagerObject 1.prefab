@@ -48,7 +48,7 @@ MonoBehaviour:
   topDownPlayerPrefab: {fileID: 2795290735108238260, guid: 83570dd456a5766499d24c095676c2aa, type: 3}
   platformerPlayerPrefab: {fileID: 5634874698746347452, guid: e6a62c4fa78a78a478a08b419148bef0, type: 3}
   cameraFollow: {fileID: 0}
-  anim: {fileID: 0}
+  anim: {fileID: 5161946660583272172}
 --- !u!1 &5345334507623967704
 GameObject:
   m_ObjectHideFlags: 0
