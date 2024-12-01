@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class TogglePanel : MonoBehaviour
 {
-    public GameObject panel;  // Referencja do panelu UI
+    public GameObject panel; 
 
-    private bool isPanelVisible = false;  // Czy panel jest widoczny
+    private bool isPanelVisible = false;  
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I))  // Jeśli naciśnięto "I"
+        if (Input.GetKeyDown(KeyCode.I)) 
         {
-            isPanelVisible = !isPanelVisible;  // Przełącz widoczność panelu
-            panel.SetActive(isPanelVisible);  // Ustaw widoczność panelu
+            isPanelVisible = !isPanelVisible;  
+            panel.SetActive(isPanelVisible);  
         }
     }
 }

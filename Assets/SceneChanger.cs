@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
-    public GameObject topDownPlayerPrefab;  // Prefab gracza w Scene1
-    public GameObject platformerPlayerPrefab;  // Prefab gracza w Scene2
+    public GameObject topDownPlayerPrefab;
+    public GameObject platformerPlayerPrefab;
     public CameraFollow cameraFollow;
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))  // Sprawdzamy, czy naciśnięto "E"
+        if (Input.GetKeyDown(KeyCode.E))
         {
             if (SceneManager.GetActiveScene().name == "SV1")
             {
@@ -26,7 +26,6 @@ public class SceneChanger : MonoBehaviour
 
     private void ChangeScene(string sceneName, GameObject newPlayerPrefab)
     {
-        // Zniszczenie obecnego gracza w scenie
         GameObject currentPlayer = GameObject.FindGameObjectWithTag("Player");
         if (currentPlayer != null)
         {
