@@ -1,16 +1,21 @@
 using UnityEngine;
 
-
 namespace Engine
 {
     public class GameEnd : MonoBehaviour
     {
-        private void OnCollisionEnter2D(Collision2D other)
+        private void OnTriggerEnter2D(Collider2D other)
         {
-        
-            if (Collectable.Collectable.count == 4)
+            if (other.CompareTag("Player"))
             {
-                Debug.Log("Koniec gry");
+                if (Collectable.Collectable.count == 4)
+                {
+                    Debug.Log("Koniec gry");
+                }
+                else
+                {
+                    Debug.Log("Nie masz jeszcze wszystkich przedmiotów");
+                }
             }
         }
     }

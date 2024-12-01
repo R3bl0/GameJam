@@ -10,6 +10,7 @@ namespace Collectable
             if (other.CompareTag("Player"))
             {
                 count++;
+                Debug.Log("item collected" + count);
                 Destroy(gameObject);
             }
         }
