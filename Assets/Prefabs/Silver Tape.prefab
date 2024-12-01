@@ -48,13 +48,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3720355509916986665, guid: 6eaa64d1fd891af4082ecd737e9b48d3, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9664971
+      objectReference: {fileID: 0}
+    - target: {fileID: 3720355509916986665, guid: 6eaa64d1fd891af4082ecd737e9b48d3, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.01675126
+      objectReference: {fileID: 0}
     - target: {fileID: 4773185541790398180, guid: 6eaa64d1fd891af4082ecd737e9b48d3, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: d52e8059572fcaa41b164f2ebebd769d, type: 3}
     - target: {fileID: 5082745674614715204, guid: 6eaa64d1fd891af4082ecd737e9b48d3, type: 3}
       propertyPath: m_Name
-      value: Collectable Variant Variant
+      value: Silver Tape
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

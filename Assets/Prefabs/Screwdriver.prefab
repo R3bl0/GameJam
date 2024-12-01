@@ -8,6 +8,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2872727135584211103, guid: 2bf4d40f8563f674bb015720fdb44f04, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5309579
+      objectReference: {fileID: 0}
+    - target: {fileID: 2872727135584211103, guid: 2bf4d40f8563f674bb015720fdb44f04, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.00000020861626
+      objectReference: {fileID: 0}
+    - target: {fileID: 3500062701744422454, guid: 2bf4d40f8563f674bb015720fdb44f04, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 3500062701744422454, guid: 2bf4d40f8563f674bb015720fdb44f04, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -50,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5977732188480442098, guid: 2bf4d40f8563f674bb015720fdb44f04, type: 3}
       propertyPath: m_Name
-      value: Collectable Variant
+      value: Screwdriver
       objectReference: {fileID: 0}
     - target: {fileID: 6215358319249967954, guid: 2bf4d40f8563f674bb015720fdb44f04, type: 3}
       propertyPath: m_Sprite
