@@ -317,6 +317,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1533662463517458321, guid: 3ab1057bc94a32c4d8c1b57c1b6d7c5f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d450dbbadde8c48e086ab48567a6e383, type: 3}
     - target: {fileID: 4417053023739576458, guid: 3ab1057bc94a32c4d8c1b57c1b6d7c5f, type: 3}
       propertyPath: m_Name
       value: Engine
@@ -327,7 +331,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6756929610345072699, guid: 3ab1057bc94a32c4d8c1b57c1b6d7c5f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.1810737
+      value: -1.92
       objectReference: {fileID: 0}
     - target: {fileID: 6756929610345072699, guid: 3ab1057bc94a32c4d8c1b57c1b6d7c5f, type: 3}
       propertyPath: m_LocalPosition.z
