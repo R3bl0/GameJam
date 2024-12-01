@@ -18,7 +18,7 @@ public class MenuManager : MonoBehaviour
 
     public void StartClick()
     {
-        SceneManager.LoadScene("Michal");
+        SceneManager.LoadScene("SV1");
     }
 
     public void CreditsClick()
