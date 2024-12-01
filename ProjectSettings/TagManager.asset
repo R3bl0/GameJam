@@ -38,15 +38,27 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Floor
+  - name: Background
     uniqueID: 3504253671
+    locked: 0
+  - name: Background decor
+    uniqueID: 1917464655
     locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Walls
+    uniqueID: 3578185461
+    locked: 0
   - name: ForeGround
     uniqueID: 1498663347
     locked: 0
-  - name: Player
-    uniqueID: 2396792387
+  - name: Menu1
+    uniqueID: 4079437119
+    locked: 0
+  - name: Ship
+    uniqueID: 621405937
+    locked: 0
+  - name: Menu2
+    uniqueID: 3138831567
     locked: 0
