@@ -10421,6 +10421,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlatformerPlayer 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9203005279485125154, guid: e6a62c4fa78a78a478a08b419148bef0, type: 3}
+      propertyPath: jumpForce
+      value: 14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
