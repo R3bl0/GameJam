@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 3085661730070397066}
   - component: {fileID: 7914648472873872561}
   - component: {fileID: 1274081931099055856}
+  - component: {fileID: 1862232388196387175}
+  - component: {fileID: 2479201640358254765}
   m_Layer: 6
   m_Name: PlatformerPlayer
   m_TagString: Player
@@ -198,3 +200,28 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1862232388196387175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945573559824906558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5d076dc6e0b41f1b7d2f060ea735f55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2479201640358254765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945573559824906558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1b287c9da964b6c89fc5f8ed7c53a21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lastPosition: {x: 0, y: 0, z: 0}
