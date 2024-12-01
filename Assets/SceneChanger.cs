@@ -7,7 +7,6 @@ public class SceneChanger : MonoBehaviour
 {
     public GameObject topDownPlayerPrefab;
     public GameObject platformerPlayerPrefab;
-    public CameraFollow cameraFollow;
     [SerializeField] Animator anim;
 
     private void Update()
@@ -27,23 +26,16 @@ public class SceneChanger : MonoBehaviour
 
     private IEnumerator ChangeScene(string sceneName, GameObject newPlayerPrefab)
     {
-        anim.SetTrigger("shhh");
-        yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
-        
         SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
-        
-        //yield return null;
-        
-        anim.SetTrigger("end");
-        
+
         GameObject currentPlayer = GameObject.FindGameObjectWithTag("Player");
         if (currentPlayer != null)
         {
             Destroy(currentPlayer);
         }
-
+        
         GameObject player = Instantiate(newPlayerPrefab, Vector3.zero, Quaternion.identity);
 
-        cameraFollow.SetTarget(player.transform);
+        yield return null;
     }
 }
