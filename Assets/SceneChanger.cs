@@ -35,6 +35,7 @@ public class SceneChanger : MonoBehaviour
 
         SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
         anim.SetTrigger("shhh");
+        anim.SetTrigger("end");
 
         GameObject player = Instantiate(newPlayerPrefab, Vector3.zero, Quaternion.identity);
 
