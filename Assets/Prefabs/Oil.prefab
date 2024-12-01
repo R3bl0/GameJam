@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: f54e06a2f8e96ab49b3255ab180f597c, type: 3}
     - target: {fileID: 491166714118768965, guid: 5aee9ab5e972d864b8ce29a9cf6e3683, type: 3}
       propertyPath: m_Name
-      value: Collectable Variant Variant Variant
+      value: Oil
       objectReference: {fileID: 0}
     - target: {fileID: 7257386132966603137, guid: 5aee9ab5e972d864b8ce29a9cf6e3683, type: 3}
       propertyPath: m_LocalPosition.x
