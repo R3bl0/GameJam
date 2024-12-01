@@ -47,3 +47,12 @@ TagManager:
   - name: ForeGround
     uniqueID: 1498663347
     locked: 0
+  - name: Menu1
+    uniqueID: 4079437119
+    locked: 0
+  - name: Ship
+    uniqueID: 621405937
+    locked: 0
+  - name: Menu2
+    uniqueID: 3138831567
+    locked: 0

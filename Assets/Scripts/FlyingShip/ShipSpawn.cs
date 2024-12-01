@@ -6,8 +6,8 @@ public class ShipSpawn : MonoBehaviour
 {
     [SerializeField] private GameObject ship;
     [SerializeField] private float cooldown = 60f;
-    [SerializeField] private GameObject endPoint;
     private Vector3 startPosition;
+    private GameObject lastSpawnedShip;
     void Start()
     {
         startPosition = transform.position;
@@ -20,13 +20,13 @@ public class ShipSpawn : MonoBehaviour
         {
             Spawn();
             yield return new WaitForSeconds(cooldown);
+            Destroy(lastSpawnedShip);
         }
     }
     
     void Spawn()
     {
         GameObject spawned = Instantiate(ship, startPosition, Quaternion.identity);
-        ShipFly shipFly = spawned.GetComponent<ShipFly>();
-        
+        lastSpawnedShip = spawned;
     }
 }
