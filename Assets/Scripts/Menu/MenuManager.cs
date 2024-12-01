@@ -9,14 +9,22 @@ public class MenuManager : MonoBehaviour
 {
     [SerializeField] private GameObject mainView;
     [SerializeField] private GameObject secondView;
+    [SerializeField] private GameObject instructionView;
 
     private void Awake()
     {
         mainView.SetActive(true);
         secondView.SetActive(false);
+        instructionView.SetActive(false);
     }
 
     public void StartClick()
+    {
+        instructionView.SetActive(true);
+        mainView.SetActive(false);
+    }
+
+    public void Start2Click()
     {
         SceneManager.LoadScene("SV1");
     }
