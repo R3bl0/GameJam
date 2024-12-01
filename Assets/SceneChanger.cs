@@ -36,6 +36,6 @@ public class SceneChanger : MonoBehaviour
 
         GameObject player = Instantiate(newPlayerPrefab, Vector3.zero, Quaternion.identity);
 
-        //cameraFollow.player = player.transform;
+        cameraFollow.SetTarget(player.transform);
     }
 }
